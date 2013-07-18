@@ -1,5 +1,5 @@
 name 'mike182uk-phpcsfixer'
-version '0.0.1'
+version '0.0.2'
 license 'MIT'
 summary 'Puppet module to install PHP CS Fixer (https://github.com/fabpot/PHP-CS-Fixer)'
 description 'Puppet module to install PHP CS Fixer (https://github.com/fabpot/PHP-CS-Fixer)'
