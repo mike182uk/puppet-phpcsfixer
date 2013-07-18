@@ -19,7 +19,7 @@ class phpcsfixer {
     exec { 'download-php-csfixer':
         command => 'wget http://cs.sensiolabs.org/get/php-cs-fixer.phar -O /usr/local/bin/php-cs-fixer',
         creates => '/usr/local/bin/php-cs-fixer',
-        path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ];
+        path => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/'];
     }
 
     file { '/usr/local/bin/php-cs-fixer' :
