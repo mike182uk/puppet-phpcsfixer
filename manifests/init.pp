@@ -2,9 +2,20 @@
 #
 # Puppet module to install PHP CS Fixer (https://github.com/fabpot/PHP-CS-Fixer)
 #
+# == Parameters
+#
+# [*install_location*]
+#   Location PHP CS Fixer should be installed too
+#
 # === Examples
 #
 #  include phpcsfixer
+#
+#  or
+#
+#  class { 'phpcsfixer' :
+#      install_location => '/usr/bin/php-cs-fixer'
+#  }
 #
 # === Authors
 #
