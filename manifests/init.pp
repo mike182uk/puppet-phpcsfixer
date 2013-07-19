@@ -14,15 +14,17 @@
 #
 # Copyright 2013 Michael Barrett
 #
-class phpcsfixer {
+class phpcsfixer (
+    $install_location = $phpcsfixer::params::install_location
+) inherits phpcsfixer::params {
 
     exec { 'download-php-csfixer':
-        command => 'wget http://cs.sensiolabs.org/get/php-cs-fixer.phar -O /usr/local/bin/php-cs-fixer',
-        creates => '/usr/local/bin/php-cs-fixer',
-        path => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/'];
+        command => "wget http://cs.sensiolabs.org/get/php-cs-fixer.phar -O ${install_location}",
+        creates => $install_location,
+        path => ['/bin/', '/sbin/', '/usr/bin/', '/usr/sbin/'];
     }
 
-    file { '/usr/local/bin/php-cs-fixer' :
+    file { $install_location :
         mode => '0755',
         owner => root,
         group => root,
