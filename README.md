@@ -12,7 +12,7 @@ Sets permissions to `0755`
 
 Sets owner to `root:root`
 
-### Useage
+### Usage
 
 Include the phpcsfixer class in your puppet manifest
 

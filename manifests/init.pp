@@ -29,7 +29,7 @@ class phpcsfixer (
     $install_location = $phpcsfixer::params::install_location
 ) inherits phpcsfixer::params {
 
-    exec { 'download-php-csfixer':
+    exec { 'download-php-csfixer' :
         command => "wget http://cs.sensiolabs.org/get/php-cs-fixer.phar -O ${install_location}",
         creates => $install_location,
         path => ['/bin/', '/sbin/', '/usr/bin/', '/usr/sbin/'];
