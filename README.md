@@ -1,3 +1,5 @@
+#### ⚠️ This project is no longer maintained
+
 # Puppet PHP CS Fixer
 
 Puppet module to install [PHP CS Fixer](https://github.com/fabpot/PHP-CS-Fixer)
@@ -16,13 +18,13 @@ Sets owner to `root:root`
 
 Include the phpcsfixer class in your puppet manifest
 
-```
+```pp
 include phpcsfixer
 ```
 
 To specify the location that PHP CS Fixer will be installed set the `install_location` parameter when including the class in your manifest
 
-```
+```pp
 class { 'phpcsfixer' :
   install_location => '/usr/bin/php-cs-fixer'
 }
